@@ -52,3 +52,60 @@
     --body-sm: .875rem;
     --body-xs: .75rem;
 }
+
+body {
+    color: var(--text-body);
+    background-color: var(--shape-background);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+aside {
+    background-image: url(assets/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 25rem;
+    overflow: hidden;
+
+    & p {
+        font-family: var(--body);
+        font-weight: 300;
+        color: var(--text-heading);
+    }
+}
+
+main {
+    overflow: auto;
+}
+
+h1 {
+    font-family: var(--logo);
+    font-size: var(--fs-logo);
+    color: var(--pink);
+    margin-bottom: .25rem;
+    font-weight: var(--fw-regular);
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.item-center {
+    align-items: center;
+}
+
+.aside-container {
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.logo-img {
+    width: 2.86rem;
+    height: 3rem;
+}
