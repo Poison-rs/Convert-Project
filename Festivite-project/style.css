@@ -26,6 +26,9 @@
     --input-stroke: #363B40;
     --input-placeholder: #869198;
 
+    /* error color */
+    --danger: #FF5959;
+
     /* shape colors */
     --shape-background: #131516;
     --shape-body: #212427;
@@ -109,6 +112,7 @@ h3 {
 
 fieldset {
     all: unset;
+    margin-bottom: 3rem;
 }
 
 legend {
@@ -170,6 +174,10 @@ label {
     align-items: center;
 }
 
+.mg-2\.5 {
+    margin-bottom: 2.5rem;
+}
+
 .aside-container {
     padding: 2rem;
     flex-direction: column;
@@ -207,6 +215,10 @@ label {
         width: 100%;
         justify-content: center;
         gap: .5rem;
+
+        & label {
+            cursor: pointer;
+        }
     }
 
     &:has(:checked) {
@@ -227,3 +239,127 @@ label {
     grid-column: 1/3;
     gap: .75rem;
 }
+
+.personalization label {
+    margin-bottom: 1rem;
+    color: var(--text-heading);
+}
+
+.inner-color {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--input-stroke);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+    & input {
+        all: unset;
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 6px;
+        left: 6px;
+        border-radius: 50%;
+    }
+
+    & #blue {
+        background-color: var(--brand-light);
+    }
+
+    & #navy {
+        background-color: var(--navy);
+    }
+
+    & #purple {
+        background-color: var(--purple);
+    }
+
+    & #fuschia {
+        background-color: var(--fuschia);
+    }
+
+    & #pink {
+        background-color: var(--pink);
+    }
+
+    & #red {
+        background-color: var(--danger);
+    }
+
+    & #orange {
+        background-color: var(--orange);
+    }
+
+    & #yellow {
+        background-color: var(--yellow);
+    }
+
+    & #lime {
+        background-color: var(--lime);
+    }
+
+    & #green {
+        background-color: var(--green);
+    }
+
+    & #cyan {
+        background-color: var(--cyan);
+    }
+
+    &:hover {
+    background-color: var(--shape-hover);
+    }
+
+    &:has(:checked) {
+    outline: 2px solid var(--brand-light);
+    }
+}
+
+.event-wrapper {
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.inner-event {
+    width: 8.375rem;
+    height: 6.4rem;
+    background-color: var(--shape-button);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    & input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    & img {
+        max-width: fit-content;
+        padding-inline: 4px;
+        padding-top: 4px;
+        padding-bottom: 8px;
+    }
+
+    & label {
+        font-weight: 300;
+        font-size: var(--body-sm);
+        padding-bottom: 8px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: var(--shape-hover);
+    }
+
+    &:has(:checked) {
+        outline: 2px solid var(--brand-light);
+    }
+}
+
