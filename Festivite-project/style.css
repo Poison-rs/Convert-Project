@@ -70,7 +70,7 @@ aside {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    max-width: 25rem;
+    /* max-width: 25rem; */
     overflow: hidden;
 
     & p {
@@ -83,6 +83,10 @@ aside {
 main {
     padding: 5rem 8.125rem;
     overflow: auto;
+}
+
+nav {
+    max-width: 35rem;
 }
 
 header {
@@ -170,6 +174,10 @@ label {
     gap: .75rem;
 }
 
+.gap-\.5 {
+    gap: .5rem;
+}
+
 .item-center {
     align-items: center;
 }
@@ -177,6 +185,16 @@ label {
 .mg-2\.5 {
     margin-bottom: 2.5rem;
 }
+
+
+.btn-primary {
+    width: 7.5rem;
+    height: 2.5rem;
+    background-color: var(--shape-button);
+    border-radius: .5rem;
+    font-size: var(--body-sm);
+}
+
 
 .aside-container {
     padding: 2rem;
@@ -363,3 +381,113 @@ label {
     }
 }
 
+.style-wrapper {
+    flex-direction: column;
+    margin-right: 3.5rem;
+}
+
+.toggle-wrapper {
+    position: relative;
+    height: 3rem;
+
+    &:has(input:checked) {
+        #lb-dark {
+            opacity: 0;
+        }
+
+        #lb-light {
+            opacity: unset;
+        }
+    }
+
+    & label {
+        margin-top: 14.5px;
+    }
+}
+
+#style {
+    color: var(--text-body);
+}
+
+.inner-style {
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: 999px;
+    transition: .4s;
+
+    & .style-dot {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--input-stroke);
+        margin-top: 3px;
+        margin-left: 3px;
+        transition: .4s;
+    }
+
+    & input {
+        position: absolute;
+        opacity: 0;
+        width: 4rem;
+        height: 2rem;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    &:has(:checked) {
+        background-color: var(--brand-light);
+
+        & .style-dot {
+            background-color: var(--text-heading);
+            margin-right: 4px;
+            margin-left: 2.15rem;
+            position: relative;
+        }
+    }
+}
+
+#lb-dark {
+    position: relative;
+}
+
+#lb-light {
+    opacity: 0;
+    position: absolute;
+    margin-left: 4.75rem;
+}
+
+.cover-photo {
+    flex-direction: column;
+}
+
+.inner-lb {
+    justify-content: center;
+    top: .75rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+@media (width >= 120em) {
+    .aside-container {
+        padding: 3rem;
+
+        .logo-img {
+            width: 5.72rem;
+            height: 6rem;
+        }
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}

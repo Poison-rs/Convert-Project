@@ -24,200 +24,229 @@
     </aside>
 
     <main>
-        <header>
-            <h2>Crie seu convite</h2>
-        </header>
+        <nav>
+            <header>
+                <h2>Crie seu convite</h2>
+            </header>
 
-        <form method="get">
-            <fieldset class="about grid">
-                <legend class="flex item-center gap-.75">
-                    <img src="assets/icons/calendar.svg" alt="imagem de calendário">
-                    <h3>Sobre o evento</h3>
-                </legend>
+            <form method="get">
+                <fieldset class="about grid">
+                    <legend class="flex item-center gap-.75">
+                        <img src="assets/icons/calendar.svg" alt="imagem de calendário">
+                        <h3>Sobre o evento</h3>
+                    </legend>
 
-                <div class="input-wrapper">
-                    <div class="about-title grid gap-.75">
-                        <label>Título</label>
-                        <input type="text" placeholder="Nome do evento" required>
+                    <div class="input-wrapper">
+                        <div class="about-title grid gap-.75">
+                            <label>Título</label>
+                            <input type="text" placeholder="Nome do evento" required>
+                        </div>
+
+                        <div class="grid gap-.75">
+                            <label>Início</label>
+                            <input type="datetime-local" required>
+                        </div>
+
+                        <div class="grid gap-.75">
+                            <label>Fim</label>
+                            <input type="datetime-local" required>
+                        </div>
+
+                        <div class="grid gap-.75">
+                            <label>Tipo</label>
+                            <div class="about-radio flex">
+                                <div class="flex item-center">
+                                    <input type="radio" value="option-1" name="option" id="personally">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#869198" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                                    <label for="personally">Presencial</label>
+                                </div>
+
+                                <div class="flex item-center">
+                                    <input type="radio" value="option-2" name="option" id="online">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#869198" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                                    <label for="online">Online</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-.75">
+                            <label>Local</label>
+                            <input type="text" placeholder="Link ou endereço" required>
+                        </div>
+
+                        <div class="about-textarea grid">
+                            <label>Descrição</label>
+                            <textarea name="details" id="details" rows="6" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                        </div>
                     </div>
+                </fieldset>
 
-                    <div class="grid gap-.75">
-                        <label>Início</label>
-                        <input type="datetime-local" required>
-                    </div>
+                <fieldset class="personalization grid">
+                    <legend class="flex item-center gap-.75">
+                        <img src="assets/icons/paintbrush.svg" alt="ícone de pincel">
+                        <h3>Personalização</h3>
+                    </legend>
 
-                    <div class="grid gap-.75">
-                        <label>Fim</label>
-                        <input type="datetime-local" required>
-                    </div>
+                    <div class="color-options grid mg-2.5">
+                        <label>Cor principal</label>
 
-                    <div class="grid gap-.75">
-                        <label>Tipo</label>
-                        <div class="about-radio flex">
-                            <div class="flex item-center">
-                                <input type="radio" value="option-1" name="option" id="personally">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#869198" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-                                <label for="personally">Presencial</label>
+                        <div class="color-wrapper flex gap-.75">
+                            <div class="inner-color">
+                                <input type="radio" id="blue" name="select">
                             </div>
 
-                            <div class="flex item-center">
-                                <input type="radio" value="option-2" name="option" id="online">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#869198" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
-                                <label for="online">Online</label>
+                            <div class="inner-color">
+                                <input type="radio" id="navy" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="purple" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="fuschia" name="select">
+                            </div>
+                            
+                            <div class="inner-color">
+                                <input type="radio" id="pink" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="red" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="orange" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="yellow" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="lime" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="green" name="select">
+                            </div>
+
+                            <div class="inner-color">
+                                <input type="radio" id="cyan" name="select">
                             </div>
                         </div>
                     </div>
 
-                    <div class="grid gap-.75">
-                        <label>Local</label>
-                        <input type="text" placeholder="Link ou endereço" required>
-                    </div>
+                    <div class="event-theme grid gap-1">
+                        <label>Tema do evento</label>
 
-                    <div class="about-textarea grid">
-                        <label>Descrição</label>
-                        <textarea name="details" id="details" rows="6" placeholder="Escreva sobre os detalhes do evento"></textarea>
-                    </div>
-                </div>
-            </fieldset>
+                        <div class="event-wrapper flex mg-2.5">
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/birthday.png" alt="imagem do input de evento aniversário">
+                                <input type="radio" name="event-select" id="birthday">
+                                <label for="birthday">Aniversário</label>
+                            </div>
 
-            <fieldset class="personalization grid">
-                <legend class="flex item-center gap-.75">
-                    <img src="assets/icons/paintbrush.svg" alt="ícone de pincel">
-                    <h3>Personalização</h3>
-                </legend>
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/Infant.png" alt="imagem do input de evento infantil">
+                                <input type="radio" name="event-select" id="infant">
+                                <label for="infant">Infantil</label>
+                            </div>
 
-                <div class="color-options grid mg-2.5">
-                    <label>Cor principal</label>
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/graduation.png" alt="imagem do input de evento formatura">
+                                <input type="radio" name="event-select" id="graduation">
+                                <label for="graduation">Formatura</label>
+                            </div>
 
-                    <div class="color-wrapper flex gap-.75">
-                        <div class="inner-color">
-                            <input type="radio" id="blue" name="select">
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/marriage.png" alt="imagem do input de evento casamento">
+                                <input type="radio" name="event-select" id="marriage">
+                                <label for="marriage">Casamento</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/baby-shower.png" alt="imagem do input de evento chá de bebê">
+                                <input type="radio" name="event-select" id="baby-shower">
+                                <label for="baby-shower">Chá de bebê</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/bridal-shower.png" alt="imagem do input de evento chá de panela">
+                                <input type="radio" name="event-select" id="bridal-shower">
+                                <label for="bridal-shower">Chá de panela</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/carnival.png" alt="imagem do input de evento Carnaval">
+                                <input type="radio" name="event-select" id="carnival">
+                                <label for="carnival">Carnaval</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/easter.png" alt="imagem do input de evento Páscoa">
+                                <input type="radio" name="event-select" id="easter">
+                                <label for="easter">Páscoa</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/june-party.png" alt="imagem do input de evento São João">
+                                <input type="radio" name="event-select" id="june-party">
+                                <label for="june-party">São João</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/halloween.png" alt="imagem do input de evento Halloween">
+                                <input type="radio" name="event-select" id="halloween">
+                                <label for="halloween">Halloween</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/christmas.png" alt="imagem do input de evento Natal">
+                                <input type="radio" name="event-select" id="christmas.png">
+                                <label for="christmas.png">Natal</label>
+                            </div>
+
+                            <div class="inner-event flex">
+                                <img src="assets/theme-icons/others.png" alt="imagem do input de evento Outros">
+                                <input type="radio" name="event-select" id="others">
+                                <label for="others">Outros</label>
+                            </div>
                         </div>
 
-                        <div class="inner-color">
-                            <input type="radio" id="navy" name="select">
-                        </div>
+                        <div class="flex gap-1">
+                            <div class="style-wrapper flex">
+                                <label id="style">Estilo</label>
+                                <div class="flex gap-.75 item-center toggle-wrapper">
+                                    <div class="inner-style">
+                                        <div class="style-dot">
+                                            <input type="checkbox" name="dark-light" id="toggle">
+                                        </div>
+                                    </div>
+                                    <label id="lb-dark">Escuro</label>
+                                    <label id="lb-light">Claro</label>
+                                </div>
+                            </div>
 
-                        <div class="inner-color">
-                            <input type="radio" id="purple" name="select">
-                        </div>
+                            <div class="cover-photo flex">
+                                <label id="style">Foto de capa</label>
+                                <div class="inner-button">
+                                    <div class="btn-primary">
+                                        <label for="file-select" class="flex item-center gap-.5 inner-lb">
+                                            <img src="assets/icons/upload.svg" alt="upload image">
+                                            Selecionar
+                                        </label>
+                                    </div>
 
-                        <div class="inner-color">
-                            <input type="radio" id="fuschia" name="select">
-                        </div>
-                        
-                        <div class="inner-color">
-                            <input type="radio" id="pink" name="select">
-                        </div>
-
-                        <div class="inner-color">
-                            <input type="radio" id="red" name="select">
-                        </div>
-
-                        <div class="inner-color">
-                            <input type="radio" id="orange" name="select">
-                        </div>
-
-                        <div class="inner-color">
-                            <input type="radio" id="yellow" name="select">
-                        </div>
-
-                        <div class="inner-color">
-                            <input type="radio" id="lime" name="select">
-                        </div>
-
-                        <div class="inner-color">
-                            <input type="radio" id="green" name="select">
-                        </div>
-
-                        <div class="inner-color">
-                            <input type="radio" id="cyan" name="select">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-theme grid gap-1">
-                    <label>Tema do evento</label>
-
-                    <div class="event-wrapper flex mg-2.5">
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/birthday.png" alt="imagem do input de evento aniversário">
-                            <input type="radio" name="event-select" id="birthday">
-                            <label for="birthday">Aniversário</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/Infant.png" alt="imagem do input de evento infantil">
-                            <input type="radio" name="event-select" id="infant">
-                            <label for="infant">Infantil</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/graduation.png" alt="imagem do input de evento formatura">
-                            <input type="radio" name="event-select" id="graduation">
-                            <label for="graduation">Formatura</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/marriage.png" alt="imagem do input de evento casamento">
-                            <input type="radio" name="event-select" id="marriage">
-                            <label for="marriage">Casamento</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/baby-shower.png" alt="imagem do input de evento chá de bebê">
-                            <input type="radio" name="event-select" id="baby-shower">
-                            <label for="baby-shower">Chá de bebê</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/bridal-shower.png" alt="imagem do input de evento chá de panela">
-                            <input type="radio" name="event-select" id="bridal-shower">
-                            <label for="bridal-shower">Chá de panela</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/carnival.png" alt="imagem do input de evento Carnaval">
-                            <input type="radio" name="event-select" id="carnival">
-                            <label for="carnival">Carnaval</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/easter.png" alt="imagem do input de evento Páscoa">
-                            <input type="radio" name="event-select" id="easter">
-                            <label for="easter">Páscoa</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/june-party.png" alt="imagem do input de evento São João">
-                            <input type="radio" name="event-select" id="june-party">
-                            <label for="june-party">São João</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/halloween.png" alt="imagem do input de evento Halloween">
-                            <input type="radio" name="event-select" id="halloween">
-                            <label for="halloween">Halloween</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/christmas.png" alt="imagem do input de evento Natal">
-                            <input type="radio" name="event-select" id="christmas.png">
-                            <label for="christmas.png">Natal</label>
-                        </div>
-
-                        <div class="inner-event flex">
-                            <img src="assets/theme-icons/others.png" alt="imagem do input de evento Outros">
-                            <input type="radio" name="event-select" id="others">
-                            <label for="others">Outros</label>
+                                    <input type="file" name="files" id="file-select">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                
-            </fieldset>
-        </form>
-
+                    
+                </fieldset>
+            </form>
+        </nav>
     </main>
 </body>
 </html>
